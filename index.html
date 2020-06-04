@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+
+<body>
+  <header>
+    <div class="title">
+      <p class="bigTitle">Social Media Dashboard</p>
+      <p class="smallTitle">Total Followers: 23,004</p>
+    </div>
+    <hr>
+
+    <div class="togglerSection">
+      <span class="mode">Dark Mode</span>
+      <label class="toggler">
+        <input type="checkbox" class="checkbox darkMode">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+  </header>
+
+
+
+  <div class="dashboard">
+    <div class="grid1">
+
+      <div class="grid1-item" style="border-color: var(--facebook);">
+        <p class="userName"><img src="images/icon-facebook.svg" class="icons"> <span class="positive">@nathanf</span></p>
+        <p class="dataNumber top">1987</p>
+        <p class="fanType">Followers</p>
+        <p class="fanChange"><img src="images/icon-up.svg" alt=""><span class="positive">12 Today</span></p>
+      </div>
+
+      <div class="grid1-item" style="border-color: var(--twitter);">
+        <p class="userName"><img src="images/icon-facebook.svg" class="icons"> <span>@nathanf</span></p>
+        <p class="dataNumber top">1044</p>
+        <p class="fanType">Followers</p>
+        <p class="fanChange"><img src="images/icon-up.svg" alt=""><span class="positive">99 Today</span></p>
+      </div>
+
+      <div class="grid1-item" id="ins">
+          <span class="insBorder"></span>
+          <p class="userName"><img src="images/icon-instagram.svg" class="icons"> <span>@realnathanf</span></p>
+          <p class="dataNumber top">11k</p>
+          <p class="fanType">Followers</p>
+          <p class="fanChange"><img src="images/icon-up.svg" alt=""><span class="positive">1099 Today</span></p>
+      </div>
+
+      <div class="grid1-item" style="border-color: var(--youtube);">
+        <p class="userName"><img src="images/icon-youtube.svg" class="icons"> <span>Nathan F.</span></p>
+        <p class="dataNumber top">8239</p>
+        <p class="fanType">Subscribers</p>
+        <p class="fanChange"><img src="images/icon-down.svg" alt=""><span class="negative">144 Today</span></p>
+      </div>
+
+    </div>
+
+    <h3>Overview - Today</h3>
+
+    <div class="grid2">
+      <div class="grid2-item">
+
+        <div class="sub-grid2">
+          <p class="acticities">Page Views</p>
+          <img src="images/icon-facebook.svg" class="icons">
+        </div>
+
+        <div class="sub-grid2">
+          <p class="dataNumber bottom">87</p>
+          <p class=percentages><img src="images/icon-up.svg" alt=""><span class="positive">3%</span></p>
+        </div>
+
+      </div>
+
+      <div class="grid2-item">
+
+        <div class="sub-grid2">
+          <p class="acticities">Likes</p>
+          <img src="images/icon-facebook.svg" class="icons">
+        </div>
+
+        <div class="sub-grid2">
+          <p class="dataNumber bottom">52</p>
+          <p class=percentages><img src="images/icon-down.svg" alt=""><span class="negative">2%</span></p>
+        </div>
+
+      </div>
+
+      <div class="grid2-item">
+
+        <div class="sub-grid2">
+          <p class="acticities">Likes</p>
+          <img src="images/icon-instagram.svg" class="icons">
+        </div>
+
+        <div class="sub-grid2">
+          <p class="dataNumber bottom">5462</p>
+          <p class=percentages><img src="images/icon-up.svg" alt=""><span class="positive">2257%</span></p>
+        </div>
+
+
+      </div>
+
+      <div class="grid2-item">
+        <div class="sub-grid2">
+          <p class="acticities">Profile Views</p>
+          <img src="images/icon-instagram.svg" class="icons">
+        </div>
+
+        <div class="sub-grid2">
+          <p class="dataNumber bottom">52k</p>
+          <p class=percentages><img src="images/icon-up.svg" alt=""><span class="positive">1375%</span></p>
+        </div>
+
+
+      </div>
+
+      <div class="grid2-item">
+
+        <div class="sub-grid2">
+          <p class="acticities">Retweets</p>
+          <img src="images/icon-twitter.svg" class="icons">
+        </div>
+
+        <div class="sub-grid2">
+          <p class="dataNumber bottom">117</p>
+          <p class=percentages><img src="images/icon-up.svg" alt=""><span class="positive">303%</span></p>
+        </div>
+
+      </div>
+
+      <div class="grid2-item">
+        <div class="sub-grid2">
+          <p class="acticities">Likes</p>
+          <img src="images/icon-twitter.svg" class="icons">
+        </div>
+
+        <div class="sub-grid2">
+          <p class="dataNumber bottom">507</p>
+          <p class=percentages><img src="images/icon-up.svg" alt=""><span class="positive">553%</span></p>
+        </div>
+
+      </div>
+
+      <div class="grid2-item">
+        <div class="sub-grid2">
+          <p class="acticities">Likes</p>
+          <img src="images/icon-youtube.svg" class="icons">
+        </div>
+
+        <div class="sub-grid2">
+          <p class="dataNumber bottom">107</p>
+          <p class=percentages><img src="images/icon-down.svg" alt=""><span class="negative">19%</span></p>
+        </div>
+
+      </div>
+
+      <div class="grid2-item">
+
+        <div class="sub-grid2">
+          <p class="acticities">Total Views</p>
+          <img src="images/icon-youtube.svg" class="icons">
+        </div>
+
+        <div class="sub-grid2">
+          <p class="dataNumber bottom">1407</p>
+          <p class=percentages><img src="images/icon-down.svg" alt=""><span class="negative">12%</span></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="index.js" charset="utf-8"></script>
+
+</html>

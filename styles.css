@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  /* Dark Theme */
+  --darkBackground: hsl(230, 17%, 14%);
+  --darkTopBG: hsl(232, 19%, 15%);
+  --darkCardBG: hsl(228, 28%, 20%);
+  --darkBlueText: hsl(228, 34%, 66%);
+  --darkWhitetext: hsl(0, 0%, 100%);
+  --darkToggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  /* linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%)) */
+  /* Light Theme */
+  --lightBackground: hsl(0, 0%, 100%);
+  --lightTopBG: hsl(225, 100%, 98%);
+  --lightCardBG: hsl(227, 47%, 96%);
+  --lightBlueText: hsl(228, 12%, 44%);
+  --lightDarkBlueText: hsl(230, 17%, 14%);
+  --lightToggle: hsl(230, 22%, 74%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+  --positive: hsl(163, 72%, 41%);
+  --negative: hsl(356, 69%, 56%);
+}
+
+html {
+  font-family: "Inter";
+  padding: 2vh 5vw;
+  background: linear-gradient(to bottom, var(--darkTopBG) 20%, var(--darkBackground) 100%);
+  color: white;
+}
+
+body {
+  margin:0;
+}
+
+.positive {
+  color: var(--positive);
+}
+
+.negative {
+  color: var(--negative);
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bigTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  transition: color 600ms ease-in-out;
+}
+
+.smallTitle {
+  font-weight: 700;
+  color: var(--darkBlueText);
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+hr {
+  border:0;
+  border-top: 5px solid;
+  border-color: var(--lightBlueText);
+  border-radius: 2px;
+  width:85vw;
+  display: none;
+  margin-bottom: 1rem;
+}
+
+.togglerSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.toggler {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem;
+  height: 2rem;
+}
+
+.togglerSection span {
+  color: var(--darkBlueText);
+  font-weight: 700;
+}
+
+.toggler {
+  margin-left: 0.75rem; //Spacing bettween "Dark Mode" and toggler.
+}
+
+.checkbox {
+  opacity: 0; //Hide the checkbox to let only the toggler visible.
+  width: 0 height:0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--darkToggle);
+  border-radius: 1rem;
+}
+
+.slider:before {
+  /* The white dot in the toggler. */
+  position: absolute;
+  background: var(--darkBackground);
+  content: '';
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 50%;
+  left: 0.3rem;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  transition: 600ms ease-in-out;
+}
+
+.checkbox:checked + .slider:before {
+  left: 1.6rem;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  background: var(--darkWhitetext);
+}
+
+@media (max-width:1050px) {
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .smallTitle {
+    margin-bottom: 0.5rem;
+  }
+
+  .togglerSection {
+    width: 88vw;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+
+  hr {
+    display: block;
+  }
+
+}
+
+/* Top Grid */
+.grid1-item {
+  background: var(--darkCardBG);
+  text-align: center;
+  border-radius: 0.2rem 0.2rem 0.5rem 0.5rem;
+  border-top: 5px solid;
+  transition: background 600ms ease-in-out;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  justify-content: space-between;
+  grid-gap: 1.5rem;
+}
+
+.userName, .fanChange, .percentages {
+  /* Line up the icons and texts in the top cards. */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.userName span {
+  margin-left: 0.7rem;
+  /* Seperatre the icon and username*/
+  color: var(--darkBlueText);
+  font-weight: 700;
+}
+
+.fanChange span {
+  margin-left: 0.2rem;
+  /*Seperate the triangle icon and text*/
+}
+
+.dataNumber.top {
+  font-weight: 700;
+  margin: 0 auto;
+  font-size: 4rem;
+}
+
+.fanType {
+  color: var(--lightBlueText);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.fanChange {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 2rem auto;
+}
+
+#ins {
+  position: relative; /* Set the reference for the instagram top border. */
+}
+
+.insBorder {
+  content: '';
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  border-radius: 0.2rem 0.2rem 0 0;
+  position:absolute;
+  width: 100%;
+  height: 5px;
+  left:0;
+  top:-5px;
+}
+
+h3 {
+  font-size: 2rem;
+  transition: color 600ms ease-in-out;
+}
+
+/* Bottom Grid  */
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto-fill;
+  grid-gap: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.grid2-item {
+  background: var(--darkCardBG);
+  border-radius: 1rem;
+  padding: 0.75rem 1.5rem;
+  transition: background 600ms ease-in-out;
+}
+
+.sub-grid2 {
+  /* Organie the content inside the bottom cards.*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acticities {
+  color: var(--darkBlueText);
+}
+
+.dataNumber.bottom {
+  font-size: 2rem;
+}
+
+.percentages span {
+  margin-left: 0.3rem;
+  font-size: 0.75rem;
+}
